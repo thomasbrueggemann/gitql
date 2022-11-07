@@ -1,0 +1,19 @@
+version: '3.3'
+services:
+  db:
+    image: mysql/mysql-server:8.0.23
+    restart: always
+    environment:
+      MYSQL_DATABASE: 'db'
+      MYSQL_USER: 'git'
+      MYSQL_PASSWORD: 'git123'
+      MYSQL_ROOT_PASSWORD: 'root123'
+    ports:
+      - '3306:3306'
+    expose:
+      - '3306'
+    volumes:
+      - my-db:/var/lib/mysql
+
+volumes:
+  my-db:
