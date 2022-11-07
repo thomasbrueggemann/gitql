@@ -5,6 +5,7 @@ use rayon::prelude::*;
 use clap::Parser;
 
 mod cli;
+mod mapfile;
 
 macro_rules! filter_try {
     ($e:expr) => {

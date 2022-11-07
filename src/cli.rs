@@ -8,4 +8,7 @@ pub struct Args {
 
    #[arg(short, long, use_value_delimiter = true, value_delimiter = ',')]
    pub repo_names: Vec<String>,
+
+   #[arg(short, long)]
+   pub author_name_mapfile: Option<String>,
 }
